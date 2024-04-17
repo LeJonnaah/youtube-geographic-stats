@@ -1,9 +1,9 @@
 {
   "all": [
-    { "country": "USA", "value": 50 },
-    { "country": "Canada", "value": 30 },
-    { "country": "UK", "value": 25 },
-    { "country": "Germany", "value": 40 }
+    { "country": "Colombia", "value": 50.8 },
+    { "country": "Argentina", "value": 30.2 },
+    { "country": "Chile", "value": 25.1 },
+    { "country": "Perú", "value": 40.8 }
   ],
   "videos": [
     { "country": "USA", "value": 40 },

@@ -24,8 +24,8 @@ main {
   border-radius: 5px;
 }
 
-h1 {
-  text-align: center;
+h2 {
+  margin-bottom: 10px;
 }
 
 .filters {
@@ -60,13 +60,15 @@ h1 {
 
 
 .see-more {
+  background: none;
   display: block;
   margin-top: 50px;
-  color: #007bff;
+  color: #529BE7;
   text-transform: uppercase;
   font-weight: bold;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .country-label {
@@ -82,8 +84,14 @@ h1 {
 
 .buttons {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  gap: 10px;
+}
+
+.filter-button.selected {
+  background-color: #2E3A43;
+  color: #3486D5;
 }
 
 .buttons button {

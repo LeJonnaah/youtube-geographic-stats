@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
           const filterType = this.getAttribute("data-filter");
           const filteredData = data[filterType]; // Filter the data based on the selected filter
           renderChart(filteredData); // Render the corresponding data based on the selected filter
+
+          // Remove the selected class from all buttons
+          filterButtons.forEach(button => button.classList.remove("selected"));
+
+          // Add the selected class to the clicked button
+          this.classList.add("selected");
         });
       });
     })
