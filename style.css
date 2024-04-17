@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #282828;
+  color: #fff;
+}
+
+.span {
+  color: gray;
+}
+
+main {
+  padding: 20px;
+}
+
+.geographies {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+#chart {
+  margin-top: 20px;
+}
+
+.bar-container {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.bar {
+  position: relative;
+  /* Posición relativa para que los elementos secundarios estén posicionados relativamente a este */
+  background-color: #BC6AF3;
+  /* Color de las barras */
+  color: #fff;
+  /* Color del texto dentro de las barras */
+  padding: 5px;
+  margin-bottom: 5px;
+  right: 60px;
+  overflow: hidden;
+  /* Oculta el contenido que se desborda */
+  border-radius: 40px;
+  margin-left: auto;
+}
+
+
+
+.see-more {
+  display: block;
+  margin-top: 50px;
+  color: #007bff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.country-label {
+  position: absolute;
+}
+
+.percentage-label {
+  position: absolute;
+  right: 5px;
+  color: white;
+  font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  border: #4b4949 1px solid;
+  padding: 10px 20px;
+  background-color: #282828;
+  border-radius: 40px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.all-videos {
+  background-color: #007bff;
+}
+
+.shorts {
+  background-color: #282828;
+  color: #333;
+}

@@ -1,0 +1,20 @@
+{
+  "all": [
+    { "country": "USA", "value": 50 },
+    { "country": "Canada", "value": 30 },
+    { "country": "UK", "value": 25 },
+    { "country": "Germany", "value": 40 }
+  ],
+  "videos": [
+    { "country": "USA", "value": 40 },
+    { "country": "Canada", "value": 25 },
+    { "country": "UK", "value": 20 },
+    { "country": "Germany", "value": 35 }
+  ],
+  "shorts": [
+    { "country": "USA", "value": 10 },
+    { "country": "Canada", "value": 5 },
+    { "country": "UK", "value": 5 },
+    { "country": "Germany", "value": 5 }
+  ]
+}
