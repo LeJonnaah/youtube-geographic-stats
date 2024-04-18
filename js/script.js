@@ -2,30 +2,35 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("data.json") // Load data from the JSON file
     .then(response => response.json())
     .then(data => {
-      renderChart(data.all); // Render the data for all initially
+      renderChart(data.all, false); // Render the data for all initially
       const filterButtons = document.querySelectorAll(".filter-button");
       filterButtons.forEach(button => {
         button.addEventListener("click", function () {
           const selectedFilter = this.getAttribute("data-filter");
-          renderChart(data[selectedFilter]);
+          renderChart(data[selectedFilter], false);
 
           // Highlight the selected button
           filterButtons.forEach(button => {
             button.classList.remove("selected");
           });
           this.classList.add("selected");
+
+          // Update the "See More" button text
+          const seeMoreButton = document.querySelector(".see-more");
+          seeMoreButton.textContent = "See more";
         });
 
-        // see more button from filtered data INVERTED
+        // see more button from filtered data
         const seeMoreButton = document.querySelector(".see-more");
         seeMoreButton.addEventListener("click", function () {
           const selectedFilter = getSelectedFilter();
+          const selectedData = data[selectedFilter];
           if (seeMoreButton.textContent === "See more") {
             seeMoreButton.textContent = "See less";
-            renderChart(data[selectedFilter]);
+            renderChart(selectedData, true);
           } else {
             seeMoreButton.textContent = "See more";
-            renderChart(data[selectedFilter], true);
+            renderChart(selectedData, false);
           }
         });
       });
