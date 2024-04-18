@@ -1,26 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("data.json") // Load data from the JSON file
+  fetch("data.json")
     .then(response => response.json())
     .then(data => {
-      renderChart(data.all, false); // Render the data for all initially
+      renderChart(data.all, false); 
       const filterButtons = document.querySelectorAll(".filter-button");
       filterButtons.forEach(button => {
         button.addEventListener("click", function () {
           const selectedFilter = this.getAttribute("data-filter");
           renderChart(data[selectedFilter], false);
 
-          // Highlight the selected button
           filterButtons.forEach(button => {
             button.classList.remove("selected");
           });
           this.classList.add("selected");
 
-          // Update the "See More" button text
           const seeMoreButton = document.querySelector(".see-more");
           seeMoreButton.textContent = "See more";
         });
 
-        // see more button from filtered data
         const seeMoreButton = document.querySelector(".see-more");
         seeMoreButton.addEventListener("click", function () {
           const selectedFilter = getSelectedFilter();
@@ -44,24 +41,23 @@ function getSelectedFilter() {
 
 function renderChart(data, showAll = false) {
   const chartContainer = document.getElementById("chart");
-  chartContainer.innerHTML = ""; // Clear any previous content
+  chartContainer.innerHTML = ""; 
 
-  const entriesToRender = showAll ? data : data.slice(0, 5); // Show all entries if showAll is true
+  const entriesToRender = showAll ? data : data.slice(0, 5);
 
   entriesToRender.forEach(item => {
     const barContainer = document.createElement("div");
     barContainer.classList.add("bar-container");
 
-    const countryLabel = document.createElement("div"); // Create a div element for the country label
+    const countryLabel = document.createElement("div");
     countryLabel.classList.add("country-label");
-    countryLabel.textContent = item.country; // Set the text content of the country label
-    barContainer.appendChild(countryLabel); // Add the country label to the bar container
+    countryLabel.textContent = item.country;
+    barContainer.appendChild(countryLabel); 
 
-    // Create a div element for the percentage
     const percentage = document.createElement("div");
     percentage.classList.add("percentage-label");
     percentage.textContent = item.value + "%";
-    barContainer.appendChild(percentage); // Add the percentage to the bar container
+    barContainer.appendChild(percentage);
 
     const bar = document.createElement("div");
     bar.classList.add("bar");
