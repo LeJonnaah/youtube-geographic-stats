@@ -6,26 +6,44 @@ document.addEventListener("DOMContentLoaded", function () {
       const filterButtons = document.querySelectorAll(".filter-button");
       filterButtons.forEach(button => {
         button.addEventListener("click", function () {
-          const filterType = this.getAttribute("data-filter");
-          const filteredData = data[filterType]; // Filter the data based on the selected filter
-          renderChart(filteredData); // Render the corresponding data based on the selected filter
+          const selectedFilter = this.getAttribute("data-filter");
+          renderChart(data[selectedFilter]);
 
-          // Remove the selected class from all buttons
-          filterButtons.forEach(button => button.classList.remove("selected"));
-
-          // Add the selected class to the clicked button
+          // Highlight the selected button
+          filterButtons.forEach(button => {
+            button.classList.remove("selected");
+          });
           this.classList.add("selected");
         });
+
+        // see more button from filtered data INVERTED
+        const seeMoreButton = document.querySelector(".see-more");
+        seeMoreButton.addEventListener("click", function () {
+          const selectedFilter = getSelectedFilter();
+          if (seeMoreButton.textContent === "See more") {
+            seeMoreButton.textContent = "See less";
+            renderChart(data[selectedFilter]);
+          } else {
+            seeMoreButton.textContent = "See more";
+            renderChart(data[selectedFilter], true);
+          }
+        });
       });
-    })
-    .catch(error => console.error("Error fetching data:", error));
+    });
 });
 
-function renderChart(data) {
+function getSelectedFilter() {
+  const selectedButton = document.querySelector(".filter-button.selected");
+  return selectedButton ? selectedButton.getAttribute("data-filter") : "videos";
+}
+
+function renderChart(data, showAll = false) {
   const chartContainer = document.getElementById("chart");
   chartContainer.innerHTML = ""; // Clear any previous content
 
-  data.forEach(item => {
+  const entriesToRender = showAll ? data : data.slice(0, 5); // Show all entries if showAll is true
+
+  entriesToRender.forEach(item => {
     const barContainer = document.createElement("div");
     barContainer.classList.add("bar-container");
 
@@ -48,9 +66,6 @@ function renderChart(data) {
     bar.setAttribute("data-value", `${item.value}%`);
     barContainer.appendChild(bar);
 
-
-
     chartContainer.appendChild(barContainer);
   });
 }
-

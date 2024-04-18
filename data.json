@@ -3,9 +3,15 @@
     { "country": "Colombia", "value": 50.8 },
     { "country": "Argentina", "value": 30.2 },
     { "country": "Chile", "value": 25.1 },
-    { "country": "Perú", "value": 40.8 }
+    { "country": "Peru", "value": 50.8 },
+    { "country": "Ecuador", "value": 30.2 },
+    { "country": "Bolivia", "value": 25.1 },
+    { "country": "Mexico", "value": 40.8 }
   ],
   "videos": [
+    { "country": "USA", "value": 40 },
+    { "country": "Canada", "value": 25 },
+    { "country": "UK", "value": 20 },
     { "country": "USA", "value": 40 },
     { "country": "Canada", "value": 25 },
     { "country": "UK", "value": 20 },

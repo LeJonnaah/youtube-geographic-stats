@@ -1,19 +1,30 @@
 body {
-  font-family: Arial, sans-serif;
   background-color: #282828;
   color: #fff;
+  font-family: "Roboto","Arial",sans-serif;
+}
+
+main {
+  border: #4b4949 1px solid;
+  padding: 30px;
+  background-color: #282828;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .span {
   color: gray;
 }
 
-main {
-  padding: 20px;
-}
-
 .geographies {
   margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
 }
 
 .container {
@@ -37,7 +48,7 @@ h2 {
 }
 
 .bar-container {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   position: relative;
 }
 
@@ -48,8 +59,7 @@ h2 {
   /* Color de las barras */
   color: #fff;
   /* Color del texto dentro de las barras */
-  padding: 5px;
-  margin-bottom: 5px;
+  padding: 7px;
   right: 60px;
   overflow: hidden;
   /* Oculta el contenido que se desborda */
@@ -65,7 +75,7 @@ h2 {
   margin-top: 50px;
   color: #529BE7;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: bolder;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -87,11 +97,13 @@ h2 {
   margin-top: 20px;
   margin-bottom: 40px;
   gap: 10px;
+  font-weight: bolder;
 }
 
 .filter-button.selected {
   background-color: #2E3A43;
   color: #3486D5;
+  border: #2E3A43 1px solid;
 }
 
 .buttons button {
