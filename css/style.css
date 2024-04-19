@@ -55,6 +55,7 @@ h2 {
   overflow: hidden;
   border-radius: 40px;
   margin-left: auto;
+  max-width: 75vw;
 }
 
 .see-more {
