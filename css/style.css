@@ -57,7 +57,9 @@ h2 {
   overflow: hidden;
   border-radius: 40px;
   margin-left: auto;
-  max-width: 32vw;
+  max-width: 100%;
+  transform: scaleX(0.5);
+  transform-origin: right;
 }
 
 .see-more {
