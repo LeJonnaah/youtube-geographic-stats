@@ -75,6 +75,7 @@ h2 {
 .country-label {
   position: absolute;
   font-weight: 500;
+  top: -4px
 }
 
 .percentage-label {
