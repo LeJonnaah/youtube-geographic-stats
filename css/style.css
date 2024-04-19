@@ -52,13 +52,12 @@ h2 {
 .bar {
   position: relative;
   background-color: #bc6af3;
-  padding: 6px;
+  padding: 4px;
   right: 65px;
-  overflow: hidden;
-  border-radius: 40px;
+  border-radius: 100px;
   margin-left: auto;
   max-width: 100%;
-  transform: scaleX(0.5);
+  transform: scaleX(0.6);
   transform-origin: right;
 }
 
