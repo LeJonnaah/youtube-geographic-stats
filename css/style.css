@@ -19,10 +19,6 @@ main {
   font-weight: normal;
 }
 
-.hidden {
-  display: none;
-}
-
 .container {
   max-width: 800px;
   margin: 50px auto;
@@ -33,7 +29,7 @@ main {
 
 h2 {
   margin-top: 0px;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .filters {
@@ -65,7 +61,7 @@ h2 {
   margin-top: 50px;
   color: #529BE7;
   text-transform: uppercase;
-  font-weight: bolder;
+  font-weight: bold;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -73,20 +69,22 @@ h2 {
 
 .country-label {
   position: absolute;
+  font-weight: 600;
 }
 
 .percentage-label {
   position: absolute;
   right: 5px;
-  font-size: 14px;
+  font-size: 15px;
   top: -2px;
+  font-weight: 600;
 }
 
 .buttons {
   display: flex;
   margin-top: 30px;
   margin-bottom: 40px;
-  gap: 10px;
+  gap: 16px;
   font-weight: bolder;
 }
 
@@ -99,7 +97,7 @@ h2 {
 .buttons button {
   border: #4b4949 1px solid;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 12px 15px;
   background-color: #282828;
   border-radius: 40px;
   cursor: pointer;
