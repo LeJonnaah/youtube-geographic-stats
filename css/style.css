@@ -7,7 +7,7 @@ body {
 }
 
 main {
-  border: #4b4949 1px solid;
+  border: #3f3f3f 1px solid;
   padding: 30px;
   background-color: #282828;
   border-radius: 5px;
@@ -78,7 +78,7 @@ h2 {
   position: absolute;
   right: 5px;
   font-size: 15px;
-  top: -2px;
+  top: -4px;
   font-weight: 500;
 }
 
