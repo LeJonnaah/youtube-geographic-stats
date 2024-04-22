@@ -6,6 +6,11 @@ body {
   font-family: "Roboto","Arial",sans-serif;
 }
 
+body.inverted {
+  background-color: #fff;
+  color: #000;
+}
+
 main {
   border: #3f3f3f 1px solid;
   padding: 30px;
@@ -16,6 +21,12 @@ main {
   font-weight: bold;
   width: 600px;
   margin: auto;
+}
+
+main.inverted {
+  background-color: #fff;
+  color: #000;
+  border: #E5E5E5 1px solid;
 }
 
 .span {
@@ -52,13 +63,17 @@ h2 {
 .bar {
   position: relative;
   background-color: #bc6af3;
-  padding: 4px;
+  padding: 5px;
   right: 65px;
   border-radius: 100px;
   margin-left: auto;
   max-width: 100%;
   transform: scaleX(0.6);
   transform-origin: right;
+}
+
+.bar.inverted {
+  background-color: #BE69F2;
 }
 
 .see-more {
@@ -77,6 +92,10 @@ h2 {
   position: absolute;
   font-weight: 500;
   top: -4px
+}
+
+.country-label.inverted .percentage-label.inverted{
+  font-weight: normal;
 }
 
 .percentage-label {
@@ -109,4 +128,30 @@ h2 {
   border-radius: 40px;
   cursor: pointer;
   color: #eee;
+}
+
+.filter-button.inverted {
+  border: #E5E5E5 1px solid;
+  color: #000;
+  background-color: #fff;
+}
+
+body.inverted .filter-button.selected {
+  background-color: #E4E4E4;
+  border: none;
+  color: #414E57;
+}
+
+#toggleButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#toggleButton.inverted {
+  background-color: #fff;
+  color: #007bff;
 }

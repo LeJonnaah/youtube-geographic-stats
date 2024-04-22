@@ -1,12 +1,12 @@
 {
   "all": [
-    { "country": "Colombia", "value": 50.8 },
-    { "country": "Argentina", "value": 30.2 },
-    { "country": "Chile", "value": 25.1 },
-    { "country": "Peru", "value": 50.8 },
-    { "country": "Ecuador", "value": 30.2 },
-    { "country": "Bolivia", "value": 25.1 },
-    { "country": "Mexico", "value": 40.8 }
+    { "country": "Colombia", "value": 46.2 },
+    { "country": "Argentina", "value": 10.4 },
+    { "country": "Chile", "value": 9.7 },
+    { "country": "Peru", "value": 8.5 },
+    { "country": "Mexico", "value": 6.9 },
+    { "country": "Bolivia", "value": 1.0 },
+    { "country": "Mexico", "value": 0.9 }
   ],
   "videos": [
     { "country": "USA", "value": 40 },

@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById('toggleButton');
+  toggleButton.addEventListener('click', function () {
+    invertColors();
+  });
   fetch("data.json")
     .then(response => response.json())
     .then(data => {
-      renderChart(data.all, false); 
+      renderChart(data.all, false);
       const filterButtons = document.querySelectorAll(".filter-button");
       filterButtons.forEach(button => {
         button.addEventListener("click", function () {
@@ -41,7 +45,7 @@ function getSelectedFilter() {
 
 function renderChart(data, showAll = false) {
   const chartContainer = document.getElementById("chart");
-  chartContainer.innerHTML = ""; 
+  chartContainer.innerHTML = "";
 
   const entriesToRender = showAll ? data : data.slice(0, 5);
 
@@ -52,7 +56,7 @@ function renderChart(data, showAll = false) {
     const countryLabel = document.createElement("div");
     countryLabel.classList.add("country-label");
     countryLabel.textContent = item.country;
-    barContainer.appendChild(countryLabel); 
+    barContainer.appendChild(countryLabel);
 
     const percentage = document.createElement("div");
     percentage.classList.add("percentage-label");
@@ -69,4 +73,33 @@ function renderChart(data, showAll = false) {
 
     chartContainer.appendChild(barContainer);
   });
+}
+
+function invertColors() {
+  document.body.classList.toggle('inverted');
+  const mainElement = document.querySelector('main');
+  mainElement.classList.toggle('inverted');
+  const barContainers = document.querySelectorAll('.bar');
+  barContainers.forEach(container => {
+    container.classList.toggle('inverted');
+  })
+  const countryLabels = document.querySelectorAll('.country-label');
+  countryLabels.forEach(label => {
+    label.classList.toggle('inverted');
+  })
+  const percentageLabels = document.querySelectorAll('.percentage-label');
+  percentageLabels.forEach(label => {
+    label.classList.toggle('inverted');
+  })
+  const filterButtons = document.querySelectorAll('.filter-button');
+  filterButtons.forEach(button => {
+    button.classList.toggle('inverted');
+    if (button.classList.contains('selected')) {
+      button.classList.toggle('inverted');
+    }
+  });
+  const selectedButton = document.querySelector('.filter-button.selected');
+  if (selectedButton) {
+    selectedButton.classList.toggle('inverted');
+  }
 }
